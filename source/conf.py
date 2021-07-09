@@ -28,13 +28,7 @@ author = 'SwissTierras Colombia'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_markdown_tables',
-    'sphinx.ext.githubpages',
-    'sphinx.ext.todo',
-    'sphinxcontrib.images',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.autodoc',
-    'recommonmark'
+    'myst_parser'
 ]
 
 
