@@ -21,15 +21,15 @@ A continuación se presenta el diagrama de componentes de las herramientas Inter
 
 ![diagrama de componentes de herramientas ili](./_static/06_diagrama_de_componentes.png)
 
-| Herramienta                     | Enlaces                                                      | Licencia | Lenguaje | Tipo   Aplicación    | Participación SwissTierras           |
-| ------------------------------- | ------------------------------------------------------------ | -------- | -------- | -------------------- | ------------------------------------ |
-| ili2c                           | [Binarios](https://github.com/claeis/ilivalidator/releases) [Cód. Fuente](https://github.com/claeis/ilivalidator) | LGPL 2   | Java     | consola   escritorio |                                      |
-| Uml/Interlis Editor             | [Binarios fork principal](https://www.interlis.ch/downloads/umleditor)  [Binarios SwissTierras](https://github.com/SwissTierrasColombia/umleditor/releases)  <br/>[Cód. Fuente fork principal](https://github.com/claeis/umleditor) [Código fuente SwissTierras](https://github.com/SwissTierrasColombia/umleditor) |          | Java     | escritorio           | Versión propia con mejoras           |
-| Conjunto de herramientas ili2db | [Binarios](http://www.eisenhutinformatik.ch/interlis/) [Binarios SwissTierras](https://github.com/SwissTierrasColombia/ili2db/releases) <br/>[Cód. Fuente](https://github.com/claeis/ili2db) [Código fuente SwissTierras](https://github.com/SwissTierrasColombia/ili2db) | LGPL     | Java     | consola              | Ver Tabla 2                          |
-| ilivalidator                    | [Binarios](https://github.com/claeis/ilivalidator/releases)  [Cód. Fuente](https://github.com/claeis/ilivalidator) | LGPL 3   | Java     | consola   escritorio |                                      |
-| iliSuite                        | [Binarios](https://github.com/SwissTierrasColombia/iliSuite/releases)  [Cód. Fuente](https://github.com/SwissTierrasColombia/iliSuite) | LGPL     | Java     | escritorio           | Creada por SwissTierras              |
-| ModelBaker                      | [Cód. Fuente](https://github.com/opengisch/QgisModelBaker)   |          | Python   | plugin               | Participación en mejoras al proyecto |
-| Asistente LADM_COL              | [Cód. Fuente](https://github.com/SwissTierrasColombia/Asistente-LADM_COL) | GPL 3    | Python   | plugin               | Creada por SwissTierras              |
+| Herramienta                     | Enlaces                                                      | Licencia | Lenguaje | Tipo   Aplicación    | Participación SwissTierras             |
+| ------------------------------- | ------------------------------------------------------------ | -------- | -------- | -------------------- | -------------------------------------- |
+| ili2c                           | [Binarios](https://github.com/claeis/ilivalidator/releases) [Cód. Fuente](https://github.com/claeis/ilivalidator) | LGPL 2   | Java     | consola   escritorio |                                        |
+| Uml/Interlis Editor             | [Binarios fork principal](https://www.interlis.ch/downloads/umleditor)  [Binarios SwissTierras](https://github.com/SwissTierrasColombia/umleditor/releases)  <br/>[Cód. Fuente fork principal](https://github.com/claeis/umleditor) [Código fuente SwissTierras](https://github.com/SwissTierrasColombia/umleditor) |          | Java     | escritorio           | Versión propia con mejoras             |
+| Conjunto de herramientas ili2db | [Binarios](http://www.eisenhutinformatik.ch/interlis/) [Binarios SwissTierras](https://github.com/SwissTierrasColombia/ili2db/releases) <br/>[Cód. Fuente](https://github.com/claeis/ili2db) [Código fuente SwissTierras](https://github.com/SwissTierrasColombia/ili2db) | LGPL     | Java     | consola              | Ver {ref}`tabla de ili2db<ili2db_table>` |
+| ilivalidator                    | [Binarios](https://github.com/claeis/ilivalidator/releases)  [Cód. Fuente](https://github.com/claeis/ilivalidator) | LGPL 3   | Java     | consola   escritorio |                                        |
+| iliSuite                        | [Binarios](https://github.com/SwissTierrasColombia/iliSuite/releases)  [Cód. Fuente](https://github.com/SwissTierrasColombia/iliSuite) | LGPL     | Java     | escritorio           | Creada por SwissTierras                |
+| ModelBaker                      | [Cód. Fuente](https://github.com/opengisch/QgisModelBaker)   |          | Python   | plugin               | Participación en mejoras al proyecto   |
+| Asistente LADM_COL              | [Cód. Fuente](https://github.com/SwissTierrasColombia/Asistente-LADM_COL) | GPL 3    | Python   | plugin               | Creada por SwissTierras                |
 
 
 
@@ -79,6 +79,7 @@ El nombre de cada aplicación sigue la convención **ili** **2** **[Sigla de un 
 
 En la Tabla siguiente se listan las aplicaciones que existen actualmente con las correspondientes bases de datos que gestionan y el nivel de participación de SwissTierras Colombia en el desarrollo de éstas.
 
+(ili2db_table)=
 | **Herramienta** | **Base de datos**              | **Participación de SwissTierras Colombia**            |
 | --------------- | ------------------------------ | ----------------------------------------------------- |
 | ili2pg          | Postgres con extensión Postgis | Revisión de la aplicación y corrección de  errores    |
