@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Herramientas Interlis &mdash; documentación de Documento herramientas ili - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Flujo de implementación con Interlis" href="flujo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Documento herramientas ili
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenido</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="interlis.html">Interlis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flujo.html">Flujo de implementación con Interlis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Herramientas Interlis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ili2c">ili2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uml-interlis-editor">UML/Interlis Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ili2db">ili2db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ilivalidator">ilivalidator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ilisuite">iliSuite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modelbaker">ModelBaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#asistente-ladm-col">Asistente LADM-COL</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documento herramientas ili</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Herramientas Interlis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/herramientas.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="herramientas-interlis">
+<h1>Herramientas Interlis<a class="headerlink" href="#herramientas-interlis" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Cada uno de los pasos descritos anteriormente se lleva a cabo con el apoyo de alguna herramienta de software. El conjunto de dichas herramientas es lo que se ha denominado en el presente documento como <strong>Herramientas Interlis</strong> y serán descritas en el resto de esta sección.</p>
+<p>Estas herramientas las podemos agrupar en herramientas <strong>primarias</strong> cuyo objetivo es la interacción con bases de datos, validación de datos o validación de modelos, y herramientas <strong>extendidas</strong>, que hacen uso de las primarias y extienden su funcionalidad.</p>
+<p>Entre las herramientas <strong>primarias</strong>, encontramos:</p>
+<ol class="simple">
+<li><p>ili2c – Compilador del lenguaje Interlis</p></li>
+<li><p>UML/Interlis Editor – Editor de diagramas UML que exporta a lenguaje Interlis</p></li>
+<li><p>ili2db – Conjunto de herramientas que permite: crear bases de datos a partir de modelos de Interlis e importar/exportar datos a una base de datos a partir de archivos de transferencia</p></li>
+<li><p>ilivalidator – Permite validar archivos de transferencia contra sus modelos correspondientes</p></li>
+</ol>
+<p>Entre las herramientas <strong>extendidas</strong>:</p>
+<ol class="simple">
+<li><p>iliSuite – Herramienta de escritorio que presenta una interfaz más amigable con el usuario y facilita el uso de algunas de las herramientas <strong>primarias</strong></p></li>
+<li><p>Model Baker – Plugin de QGIS que permite generar/editar datos de los modelos de Interlis y hace uso de la herramienta ili2db para la creación de las bases de datos e importación/exportación de datos desde un archivo de transferencia</p></li>
+<li><p>Asistente LADM – Plugin de QGIS que permite gestionar la información del modelo LADM_COL</p></li>
+</ol>
+<p>A continuación se presenta el diagrama de componentes de las herramientas Interlis:</p>
+<p><img alt="diagrama de componentes de herramientas ili" src="_images/06_diagrama_de_componentes.png" /></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Herramienta</p></th>
+<th class="head"><p>Enlaces</p></th>
+<th class="head"><p>Licencia</p></th>
+<th class="head"><p>Lenguaje</p></th>
+<th class="head"><p>Tipo   Aplicación</p></th>
+<th class="head"><p>Participación SwissTierras</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ili2c</p></td>
+<td><p><a class="reference external" href="https://github.com/claeis/ilivalidator/releases">Binarios</a> <a class="reference external" href="https://github.com/claeis/ilivalidator">Cód. Fuente</a></p></td>
+<td><p>LGPL 2</p></td>
+<td><p>Java</p></td>
+<td><p>consola   escritorio</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Uml/Interlis Editor</p></td>
+<td><p><a class="reference external" href="https://www.interlis.ch/downloads/umleditor">Binarios fork principal</a>  <a class="reference external" href="https://github.com/SwissTierrasColombia/umleditor/releases">Binarios SwissTierras</a>  <br/><a class="reference external" href="https://github.com/claeis/umleditor">Cód. Fuente fork principal</a> <a class="reference external" href="https://github.com/SwissTierrasColombia/umleditor">Código fuente SwissTierras</a></p></td>
+<td><p></p></td>
+<td><p>Java</p></td>
+<td><p>escritorio</p></td>
+<td><p>Versión propia con mejoras</p></td>
+</tr>
+<tr class="row-even"><td><p>Conjunto de herramientas ili2db</p></td>
+<td><p><a class="reference external" href="http://www.eisenhutinformatik.ch/interlis/">Binarios</a> <a class="reference external" href="https://github.com/SwissTierrasColombia/ili2db/releases">Binarios SwissTierras</a> <br/><a class="reference external" href="https://github.com/claeis/ili2db">Cód. Fuente</a> <a class="reference external" href="https://github.com/SwissTierrasColombia/ili2db">Código fuente SwissTierras</a></p></td>
+<td><p>LGPL</p></td>
+<td><p>Java</p></td>
+<td><p>consola</p></td>
+<td><p>Ver Tabla 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>ilivalidator</p></td>
+<td><p><a class="reference external" href="https://github.com/claeis/ilivalidator/releases">Binarios</a>  <a class="reference external" href="https://github.com/claeis/ilivalidator">Cód. Fuente</a></p></td>
+<td><p>LGPL 3</p></td>
+<td><p>Java</p></td>
+<td><p>consola   escritorio</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>iliSuite</p></td>
+<td><p><a class="reference external" href="https://github.com/SwissTierrasColombia/iliSuite/releases">Binarios</a>  <a class="reference external" href="https://github.com/SwissTierrasColombia/iliSuite">Cód. Fuente</a></p></td>
+<td><p>LGPL</p></td>
+<td><p>Java</p></td>
+<td><p>escritorio</p></td>
+<td><p>Creada por SwissTierras</p></td>
+</tr>
+<tr class="row-odd"><td><p>ModelBaker</p></td>
+<td><p><a class="reference external" href="https://github.com/opengisch/QgisModelBaker">Cód. Fuente</a></p></td>
+<td><p></p></td>
+<td><p>Python</p></td>
+<td><p>plugin</p></td>
+<td><p>Participación en mejoras al proyecto</p></td>
+</tr>
+<tr class="row-even"><td><p>Asistente LADM_COL</p></td>
+<td><p><a class="reference external" href="https://github.com/SwissTierrasColombia/Asistente-LADM_COL">Cód. Fuente</a></p></td>
+<td><p>GPL 3</p></td>
+<td><p>Python</p></td>
+<td><p>plugin</p></td>
+<td><p>Creada por SwissTierras</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="ili2c">
+<h2>ili2c<a class="headerlink" href="#ili2c" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="ili2c-pasos del flujo" src="_images/ili2c01.png" /></p>
+<p>Es una aplicación que verifica si la sintaxis de uno o varios archivos de código fuente de Interlis es correcta. Se puede ejecutar a través de la línea de comandos o con su propia interfaz gráfica. También permite generar el XSD asociado al formato de transferencia a partir de los modelos de Interlis.</p>
+<p><em>ili2c desde consola:</em></p>
+<p><img alt="ili2c ejecutado desde la consola" src="_images/ili2c-console.gif" /></p>
+<p><em>ili2c desde la interfaz gráfica:</em></p>
+<p><img alt="ili2c ejecutado desde la interfaz gráfica" src="_images/ili2c-gui.gif" /></p>
+</div>
+<div class="section" id="uml-interlis-editor">
+<h2>UML/Interlis Editor<a class="headerlink" href="#uml-interlis-editor" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="uml-editor-pasos del flujo" src="_images/umleditor01.png" /></p>
+<p>Es un editor de diagramas de clases de UML que tiene como característica principal la posibilidad de exportar un modelo UML a archivos de modelo de Interlis. Permite definir propiedades, dominios, restricciones y otras características propias de Interlis que no están en un diagrama de clases común.</p>
+<p><img alt="uml-editor interfaz" src="_images/umleditor.gif" /></p>
+<p>SwissTierras tiene un fork del proyecto principal en donde se han realizado algunas mejoras a la aplicación.</p>
+</div>
+<div class="section" id="ili2db">
+<h2>ili2db<a class="headerlink" href="#ili2db" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="ili2db-pasos del flujo" src="_images/ili2db01.png" /></p>
+<p>Es un conjunto de herramientas de consola para trabajar con Interlis. Cada una de estas herramientas realiza 3 funciones principales:</p>
+<p><img alt="ili2db-funcionalidades" src="_images/ili2db02.png" /></p>
+<ol class="simple">
+<li><p><strong>Crear un esquema de base de datos</strong> a partir de uno o varios modelos descritos en el lenguaje de modelado de Interlis (archivos ili).</p></li>
+<li><p><strong>Exportar datos</strong> desde una base de datos a un archivo de transferencia de Interlis (xtf).</p></li>
+<li><p><strong>Importar datos</strong> desde un archivo de transferencia de Interlis (xtf) a una base de datos.</p></li>
+</ol>
+<p>El nombre de cada aplicación sigue la convención <strong>ili</strong> <strong>2</strong> <strong>[Sigla de un motor de base de datos]</strong> que significa <strong>Interlis</strong> <strong>To</strong> <strong>DB de destino</strong>. Por ejemplo, si se requiere trabajar con el motor <strong>Postgres</strong>, la aplicación que debemos utilizar es <strong>ili2pg</strong> como se especifica en la siguiente tabla.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Interlis</strong> <strong>To</strong> <strong>DB de destino</strong></p></th>
+<th class="head"><p><strong>Descripción</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>ili</strong>2<strong>pg</strong></p></td>
+<td><p><strong>Interlis</strong> <strong>a</strong> <strong>Postgres</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ili</strong>2<strong>ora</strong></p></td>
+<td><p><strong>Interlis</strong> <strong>a</strong> <strong>Oracle</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ili</strong>2<strong>mssql</strong></p></td>
+<td><p><strong>Interlis</strong> <strong>a</strong> <strong>Microsoft SQLServer</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>En la Tabla siguiente se listan las aplicaciones que existen actualmente con las correspondientes bases de datos que gestionan y el nivel de participación de SwissTierras Colombia en el desarrollo de éstas.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Herramienta</strong></p></th>
+<th class="head"><p><strong>Base de datos</strong></p></th>
+<th class="head"><p><strong>Participación de SwissTierras Colombia</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ili2pg</p></td>
+<td><p>Postgres con extensión Postgis</p></td>
+<td><p>Revisión de la aplicación y corrección de  errores</p></td>
+</tr>
+<tr class="row-odd"><td><p>ili2gpkg</p></td>
+<td><p>GeoPackage</p></td>
+<td><p>Revisión de la aplicación y corrección de  errores</p></td>
+</tr>
+<tr class="row-even"><td><p>ili2mssql</p></td>
+<td><p>Ms SQL Server 2012 o superior</p></td>
+<td><p>Creación de la herramienta y corrección de errores</p></td>
+</tr>
+<tr class="row-odd"><td><p>ili2ora</p></td>
+<td><p>Oracle 11 o superior</p></td>
+<td><p>Actualizado a Oracle Spatial y corrección de  errores</p></td>
+</tr>
+<tr class="row-even"><td><p>ili2fgdb</p></td>
+<td><p>File Geodatabase</p></td>
+<td><p>No participa.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ili2gdb</p></td>
+<td><p>GeoDb</p></td>
+<td><p>No participa.</p></td>
+</tr>
+<tr class="row-even"><td><p>ili2mdb</p></td>
+<td><p>Microsoft Access Database</p></td>
+<td><p>No participa.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ili2mysql</p></td>
+<td><p>My SQL</p></td>
+<td><p>No participa.</p></td>
+</tr>
+</tbody>
+</table>
+<p>SwissTierras Colombia, en su fork del proyecto principal, ha venido trabajando en crear, mejorar y/o dar soporte a varias de las herramientas. Dichos cambios, en su mayoría, han sido integrados al proyecto principal.</p>
+</div>
+<div class="section" id="ilivalidator">
+<h2>ilivalidator<a class="headerlink" href="#ilivalidator" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="ilivalidator-pasos del flujo" src="_images/ilivalidator01.png" /></p>
+<p>Es una aplicación que verifica si los datos de un archivo de transferencia de Interlis están conformes con sus respectivos modelos de Interlis. Puede ser ejecutado en consola o con interfaz gráfica.</p>
+<p><img alt="ilivalidator-proceso" src="_images/ilivalidator02.png" /></p>
+<p>El usuario le proporciona principalmente a ilivalidator dos cosas: la primera es el archivo xtf con los datos a verificar, y la segunda, el archivo ili o los repositorios donde se encuentran los archivos ili con los modelos. Con esta información, ilivalidator no solo revisa que los datos tengan la estructura adecuada, sino que revisa que cumplan con las definiciones adicionales que contienen los modelos, como la cardinalidad de los campos; cardinalidad entre registros; restricciones de los datos y valores de dominios adecuados.</p>
+<p><img alt="ilivalidator-ejecucion en consola" src="_images/ilivalidator-console.gif" /></p>
+<p><img alt="ilivalidator-ejecución gui" src="_images/ilivalidator-gui.gif" /></p>
+</div>
+<div class="section" id="ilisuite">
+<h2>iliSuite<a class="headerlink" href="#ilisuite" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="ilisuite-pasos del flujo" src="_images/ilisuite04.png" /></p>
+<p>Es una aplicación creada por SwissTierras cuyo objetivo es facilitar el trabajo con Interlis al integrar las herramientas mencionadas anteriormente, en una interfaz gráfica simple tipo Wizard que guía al usuario en cada proceso. La intención de iliSuite es tener en una sola aplicación las herramientas que se requieren en el flujo de implementación de Interlis. Además, por ser una aplicación Java es multiplataforma y, por lo tanto, puede ser ejecutada en Windows y sistemas compatibles con GNU/Linux.</p>
+<p>IliSuite se encuentra en una etapa estable de desarrollo y SwissTierras continuamente está agregando mejoras y actualizando la aplicación para agregarle las nuevas características que se le agregan a las herramientas que contiene.</p>
+<p>Como el objetivo de SwissTierras es facilitar el trabajo con Interlis, ha desarrollado un instalador de iliSuite para los sistemas operativos Windows.</p>
+<p><em>Ejemplo de creación de base de datos a partir del modelo Interlis:</em></p>
+<p><img alt="ilisuite-interfaz" src="_images/ilisuite.gif" /></p>
+<p><em>Capas de Ilisuite:</em></p>
+<p><img alt="ilisuite-capas de la aplicación" src="_images/ilisuite03.png" /></p>
+</div>
+<div class="section" id="modelbaker">
+<h2>ModelBaker<a class="headerlink" href="#modelbaker" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es un plugin para QGIS 3 que permite crear esquemas de BD y provee las capas y formularios de edición con base en el esquema. Exporta datos estructurados en el formato INTERLIS (XTF).</p>
+<p><img alt="modelBaker-pasos del flujo" src="_images/modelbaker01.png" /></p>
+<p><img alt="modelBaker-interfaz" src="_images/modelbaker02.png" /></p>
+</div>
+<div class="section" id="asistente-ladm-col">
+<h2>Asistente LADM-COL<a class="headerlink" href="#asistente-ladm-col" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="asistente-pasos del flujo" src="_images/asistente01.png" /></p>
+<p>Es un plugin para QGIS 3 que permite gestionar la información del modelo <strong>LADM_COL</strong>. Asiste en el flujo para capturar y editar datos conformes con el modelo catastro-registro de LADM_COL; realizar validaciones sobre los datos generados; y generar archivos de intercambio de INTERLIS (.XTF). Para más información, consulte la <a class="reference external" href="https://swisstierrascolombia.github.io/Asistente-LADM-COL/introduccion.html#generalidades">documentación</a> o el <a class="reference external" href="https://github.com/SwissTierrasColombia/Asistente-LADM-COL">repositorio de código</a> del Asistente LADM-COL</p>
+<p><img alt="asistente-interfaz" src="_images/asistente02.png" /></p>
+<p><img alt="asistente-interfaz" src="_images/asistente03.png" /></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="flujo.html" class="btn btn-neutral float-left" title="Flujo de implementación con Interlis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021 SwissTierras Colombia
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

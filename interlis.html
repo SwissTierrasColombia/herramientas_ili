@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interlis &mdash; documentación de Documento herramientas ili - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Flujo de implementación con Interlis" href="flujo.html" />
+    <link rel="prev" title="Herramientas ili" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Documento herramientas ili
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenido</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interlis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-interlis">¿Qué es Interlis?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#el-lenguaje-de-interlis">El lenguaje de Interlis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#el-formato-de-transferencia-de-interlis">El formato de transferencia de Interlis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flujo.html">Flujo de implementación con Interlis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="herramientas.html">Herramientas Interlis</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documento herramientas ili</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Interlis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/interlis.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="interlis">
+<h1>Interlis<a class="headerlink" href="#interlis" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Antes de entrar en detalles sobre Interlis<a class="footnote-reference brackets" href="#def-nombre" id="id1">1</a>, es preciso plantear el siguiente escenario:</p>
+<p><strong>Escenario:</strong></p>
+<p>Dos organizaciones del sector de la salud, la organización A y la organización B, requieren intercambiar información para usar en sus procesos (<strong>interoperabilidad</strong>). Entre toda la información que van a intercambiar, están los datos de sus <em>pacientes</em>.</p>
+<p>En el <em>modelo de datos</em> de la organización A, los pacientes se almacenan con el nombre <strong>Persona</strong>, mientras que en la organización B son almacenados con el nombre de <strong>Cliente</strong>. Además de esto, los nombres de los pacientes se almacenan con una estructura ligeramente diferente (ver la imagen).</p>
+<p><img alt="Modelo organizaciones" src="_images/organizaciones.png" /></p>
+<p>A pesar de ser el mismo concepto, estas pequeñas diferencias en los nombres, en las estructuras y posiblemente en los tipos de datos, dificulta el objetivo de intercambiar la información. Para lograr dicho objetivo, las organizaciones deben de definir una <strong>semántica común</strong> y un formato con el que se va a transferir la información. Por lo cuál se plantean los siguientes interrogantes: ¿Cómo definir una semántica común? ¿Qué formato de transferencia elegir?</p>
+<div class="section" id="que-es-interlis">
+<h2>¿Qué es Interlis?<a class="headerlink" href="#que-es-interlis" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Interlis es un estándar (SN612031) cuyo objetivo es resolver los interrogantes que plantea el escenario descrito anteriormente, dado que fue pensado para buscar la <strong>interoperabilidad</strong> entre Sistemas de Información independientemente de la plataforma que estos utilizan. Concretamente, Interlis es la combinación de dos elementos:</p>
+<ol class="simple">
+<li><p><strong>Un lenguaje</strong> para la descripción de modelos con el que se busca definir una semántica común</p></li>
+<li><p><strong>Un formato de transferencia</strong> unificado que se deriva de los modelos descritos con el lenguaje de Interlis</p></li>
+</ol>
+<p><strong>¿Qué quiere decir esto?</strong></p>
+<p>En el escenario planteado inicialmente, si las organizaciones utilizan Interlis, pueden definir una semántica común a través de un modelo descrito en el <strong>lenguaje de Interlis</strong>, como por ejemplo el modelo a continuación:</p>
+<div class="highlight-interlis notranslate"><div class="highlight"><pre><span></span>INTERLIS 2.3;
+
+MODEL Modelo_pacientes_ejemplo (es)
+AT &quot;mailto:contacto@swistierrascolombia.com&quot;
+VERSION &quot;1.0&quot;  =
+
+  TOPIC Salud =
+    CLASS Paciente =
+      nombres : MANDATORY TEXT*30;
+      apellidos : MANDATORY TEXT*30;
+      documento_identidad : MANDATORY TEXT*100;
+      direccion: TEXT*255;
+    END Paciente;
+
+    !! otras definiciones ...
+    
+  END Salud;
+END Modelo_pacientes_ejemplo.
+</pre></div>
+</div>
+<p>Con este modelo las organizaciones A y B no solo llegan a un acuerdo con respecto a la información que van a compartir (los nombres, tipos de datos, campos obligatorios, entre otras cosas), sino que también define el formato con el que se transfiere la información.</p>
+<p><strong>¿Cómo la descripción del modelo también especifica el formato de transferencia?</strong></p>
+<p>El formato de transferencia de Interlis<a class="footnote-reference brackets" href="#def-xtf" id="id2">2</a> esta escrito en lenguaje XML. La estructura de este, a su vez, es formada por las estructuras y relaciones entre clases que contiene el modelo. De esta forma, un registro que pertenece a cierta clase es envuelto en una etiqueta XML con el nombre de la clase a la que pertenece, y los valores de cada atributo son envueltos en etiquetas con el nombre del atributo al que pertenecen.</p>
+<p>Para el ejemplo, se puede apreciar que el registro de la paciente <em>Martina González</em> se encuentra entre la etiqueta XML <em>«Modelo_pacientes_ejemplo.Salud.Paciente»</em> con sus atributos también dentro de etiquetas con los nombres especificados en el modelo de Interlis:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;TRANSFER</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.interlis.ch/INTERLIS2.3&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;HEADERSECTION</span> <span class="na">SENDER=</span><span class="s">&quot;ili2pg-4.4.3-658b7daf37ba45ed2330ca3e3a3c3d59c96e91fa&quot;</span> <span class="na">VERSION=</span><span class="s">&quot;2.3&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;MODELS&gt;</span>
+        <span class="nt">&lt;MODEL</span> <span class="na">NAME=</span><span class="s">&quot;Modelo_pacientes_ejemplo&quot;</span> <span class="na">VERSION=</span><span class="s">&quot;1.0&quot;</span> <span class="na">URI=</span><span class="s">&quot;mailto:contacto@swistierrascolombia.com&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/MODEL&gt;</span>
+    <span class="nt">&lt;/MODELS&gt;</span>
+<span class="nt">&lt;/HEADERSECTION&gt;</span>
+<span class="nt">&lt;DATASECTION&gt;</span>
+
+<span class="nt">&lt;Modelo_pacientes_ejemplo.Salud</span> <span class="na">BID=</span><span class="s">&quot;Modelo_pacientes_ejemplo.Salud&quot;</span><span class="nt">&gt;</span>
+    
+    <span class="nt">&lt;Modelo_pacientes_ejemplo.Salud.Paciente</span> <span class="na">TID=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;nombres&gt;</span>Martina<span class="nt">&lt;/nombres&gt;</span>
+        <span class="nt">&lt;apellidos&gt;</span>González<span class="nt">&lt;/apellidos&gt;</span>
+        <span class="nt">&lt;documento_identidad&gt;</span>79111222<span class="nt">&lt;/documento_identidad&gt;</span>
+        <span class="nt">&lt;direccion&gt;</span>cra 200 # 20-40<span class="nt">&lt;/direccion&gt;</span>
+    <span class="nt">&lt;/Modelo_pacientes_ejemplo.Salud.Paciente&gt;</span>
+    
+    <span class="nt">&lt;Modelo_pacientes_ejemplo.Salud.Paciente</span> <span class="na">TID=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;nombres&gt;</span>Enrique<span class="nt">&lt;/nombres&gt;</span>
+        <span class="nt">&lt;apellidos&gt;</span>Ospina<span class="nt">&lt;/apellidos&gt;</span>
+        <span class="nt">&lt;documento_identidad&gt;</span>1020123456<span class="nt">&lt;/documento_identidad&gt;</span>
+    <span class="nt">&lt;/Modelo_pacientes_ejemplo.Salud.Paciente&gt;</span>
+<span class="nt">&lt;/Modelo_pacientes_ejemplo.Salud&gt;</span>
+<span class="nt">&lt;/DATASECTION&gt;</span>
+<span class="nt">&lt;/TRANSFER&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="el-lenguaje-de-interlis">
+<h2>El lenguaje de Interlis<a class="headerlink" href="#el-lenguaje-de-interlis" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El lenguaje de Interlis, como se vio en las anteriores secciones, se utiliza para describir modelos de la realidad y definir una semántica común. Es un lenguaje orientado a objetos que es conceptualmente muy similar a los diagramas de clases de UML, pero que a diferencia de estos, los modelos descritos en Interlis son precisos y pueden ser interpretados de forma inequívoca.</p>
+<p><strong>¿Cómo se logra esta precisión en la descripción de los modelos?</strong></p>
+<p>Esto es posible gracias a que el lenguaje de Interlis es un lenguaje de texto que contiene definiciones claras para los tipos de datos básicos, los tipos de geometría, las relaciones entre clases,  la definición de enumeraciones (dominios) entre otros elementos, de tal forma que el lenguaje puede ser interpretado por diferentes herramientas de software y transformado a distintos Sistemas Gestores de Bases de Datos. Por estas razones, <em>“el lenguaje se ofrece como un complemento necesario a UML”</em>.</p>
+</div>
+<div class="section" id="el-formato-de-transferencia-de-interlis">
+<h2>El formato de transferencia de Interlis<a class="headerlink" href="#el-formato-de-transferencia-de-interlis" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El formato de transferencia de Interlis está escrito en lenguaje XML y su estructura está definida por los modelos escritos en el lenguaje Interlis, como se había mencionado. Cuando se va a <strong>transferir información</strong>, estos XML son generados automáticamente con algunas aplicaciones de software, que se encargan de recopilar lo datos de las bases de datos y escribirlos en los archivos de salida (XML con extensión <strong>xtf</strong>), con el formato adecuado.</p>
+<p>Como los archivos generados deben ser conformes al modelo descrito en Interlis, es posible verificar que estos tengan la estructura de los datos, las relaciones y su cardinalidad y demás reglas consignadas en los modelos de forma automática. Esta es una <strong>validación de datos</strong> mucho más potente que la que se podría hacer con el XSD asociado.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="def-nombre"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf">Manual de Interlis</a> capítulos 1 y 2</p>
+</dd>
+<dt class="label" id="def-xtf"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf">Manual de Interlis</a> capítulo 3</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="flujo.html" class="btn btn-neutral float-right" title="Flujo de implementación con Interlis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Herramientas ili" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021 SwissTierras Colombia
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

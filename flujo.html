@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Flujo de implementación con Interlis &mdash; documentación de Documento herramientas ili - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Herramientas Interlis" href="herramientas.html" />
+    <link rel="prev" title="Interlis" href="interlis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Documento herramientas ili
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenido</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="interlis.html">Interlis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flujo de implementación con Interlis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modelado-de-datos">Modelado de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generar-un-modelo-fisico">Generar un modelo físico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generar-y-editar-datos">Generar y Editar Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exportar-datos">Exportar Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importar-datos">Importar Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#validar-datos">Validar Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="herramientas.html">Herramientas Interlis</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documento herramientas ili</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Flujo de implementación con Interlis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/flujo.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="flujo-de-implementacion-con-interlis">
+<h1>Flujo de implementación con Interlis<a class="headerlink" href="#flujo-de-implementacion-con-interlis" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El siguiente es el enfoque para la implementación de Interlis (ver imagen) propuesto por SwissTierras Colombia, que incluye los siguientes pasos:</p>
+<ol class="simple">
+<li><p>Modelado de datos</p></li>
+<li><p>Generar modelo físico</p></li>
+<li><p>Generar y Editar datos</p></li>
+<li><p>Exportar Datos</p></li>
+<li><p>Importar Datos</p></li>
+<li><p>Validar Datos (Paso transversal al flujo)</p></li>
+</ol>
+<p><img alt="flujo de implementación interlis" src="_images/03_flujo_implementacion_interlis.png" /></p>
+<div class="section" id="modelado-de-datos">
+<h2>Modelado de Datos<a class="headerlink" href="#modelado-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El primer paso al usar Interlis es el <strong>Modelado de Datos</strong> con el lenguaje de Interlis. Este paso es el más importante, debido a que el modelado de datos con Interlis no solo nos permite describir los modelos que abstraen la realidad que se requiere representar, sino que define una semántica común entre los sistemas de información que van a cooperar y además especifica implícitamente la estructura del formato de transferencia de Interlis.</p>
+<p>El código en lenguaje de Interlis, con el que se modelan los datos, se puede escribir en cualquier editor de texto. Lo importante es que cumpla con la sintaxis de Interlis y esto se logra examinando el archivo fuente con un compilador de Interlis como <strong>ili2c</strong><a class="footnote-reference brackets" href="#enlace-ili2c" id="id1">1</a>. Como ejemplo, en la siguiente imagen se observa el código de un modelo denominado <em>Land_Admin_Model</em> en el lenguaje de Interlis.</p>
+<p><img alt="modelo en lenguaje interlis" src="_images/04_modelo_en_interlis.png" /></p>
+<hr class="docutils" />
+<p>Otra estrategia que se puede utilizar es generar el código de Interlis a partir de un Diagrama de clases de UML usando la herramienta llamada UML/Interlis Editor. Esta herramienta e ili2c son explicadas más adelante en este mismo documento.</p>
+</div>
+<div class="section" id="generar-un-modelo-fisico">
+<h2>Generar un modelo físico<a class="headerlink" href="#generar-un-modelo-fisico" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Interlis tiene como uno de sus enfoques ser independiente al software sobre el que se implementa el modelo, esto bajo el principio de neutralidad tecnológica. Pero en la práctica, los datos de los sistemas de información se guardan en bases de datos de un motor específico, y por lo tanto, es necesario que los modelos de Interlis sean transformados a algún Sistema gestor de Bases de datos en particular. La virtud de Interlis en este sentido, es que cuenta con una serie de herramientas que permite pasar del modelo descriptivo a diferentes motores de bases de datos. En el presente enfoque se <strong>Genera un modelo físico</strong> (esquema de base de datos) en el motor de base de datos que requiere el sistema y que es compatible 100% con Interlis.</p>
+<p>Interlis es independiente de plataformas. Sin embargo, existen herramientas de software como ili2db que permiten transformar un modelo descrito en Intelis a esquemas de base de datos compatibles. Estas herramientas traducen las clases, relaciones y tipos de datos a sus equivalentes en el motor de base de datos de destino. En las siguientes imágenes se presentan las bases de datos generadas en Postgres y MsSQL Server respectivamente, para el modelo <em>Land_Admin_Model</em> presentado anteriormente.</p>
+<p><img alt="modelo intelis generado en postgres" src="_images/05_modelo_en_postgres.png" />
+<img alt="modelo interlis generado en MsSql" src="_images/modelo_en_mssql.png" /></p>
+</div>
+<div class="section" id="generar-y-editar-datos">
+<h2>Generar y Editar Datos<a class="headerlink" href="#generar-y-editar-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En esta fase, la gestión de datos es una de las actividades más recurrentes en el proceso. Tanto la generación como la edición de información hacen parte de las tareas más comunes en un sistema de información. Los datos pueden ser ingresados por aplicaciones propias del sistema o de manera masiva según sea el caso.</p>
+<p>SwissTierras Colombia ha desarrollado algunas herramientas que facilitan este proceso para los sistemas Geográficos y que serán descritas más adelante.</p>
+</div>
+<div class="section" id="exportar-datos">
+<h2>Exportar Datos<a class="headerlink" href="#exportar-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Cuando el sistema requiere compartir datos con otro sistema, la AI propone realizarlo usando Interlis, y para ello se deben generar los archivos <strong>XTF</strong> de la información contenida en la base de datos del sistema. Compartir la información con el formato de transferencia de Interlis hace que esta no esté acoplada a un sistema de base de datos en particular.</p>
+<p>En el enfoque propuesto, las herramientas utilizadas para crear la base de datos en el paso <strong>Generar un modelo físico</strong> como ili2db, iliSuite, ModelBaker o Asistente LADM-COL, también permiten <strong>Exportar Datos</strong> de ésta a archivos de transferencia de Interlis (XTF).</p>
+</div>
+<div class="section" id="importar-datos">
+<h2>Importar Datos<a class="headerlink" href="#importar-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Como el objetivo que se busca al usar Interlis es permitir el intercambio de datos entre sistemas, también cada Sistema de Información recibe información de sistemas externos en formato XTF. Esta información se puede importar en la base de datos del sistema usando las herramientas mencionadas en los pasos <em>Generar un modelo físico</em> y <em>Exportar Datos</em>.</p>
+<p>Es importante mencionar que, al importar los datos, las herramientas sugeridas hacen una validación previa de los datos respecto a los modelos y de esta manera, garantizan que la información que ingresa a la base de datos de nuestro sistema es conforme a los modelos con que se está trabajando.</p>
+</div>
+<div class="section" id="validar-datos">
+<h2>Validar Datos<a class="headerlink" href="#validar-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Siempre que se requiera, y en particular cuando se importan y exportan datos al sistema, se pueden <strong>Validar los Datos</strong> con herramientas de software que inspeccionan si la información en los archivos de transferencia cumple con los modelos descritos en el lenguaje de Interlis. Estas validaciones no solo verifican la estructura de los datos sino también la cardinalidad, los valores de dominios y demás restricciones especificados en los modelos.</p>
+<p>SwissTierras Colombia sugiere la utilización de un conjunto de herramientas, principalmente <strong>ilivalidator</strong>, que sirven para la validación de los datos y que serán explicadas en las siguientes secciones.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="enlace-ili2c"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>https://www.interlis.ch/en/downloads/ili2c</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="herramientas.html" class="btn btn-neutral float-right" title="Herramientas Interlis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="interlis.html" class="btn btn-neutral float-left" title="Interlis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021 SwissTierras Colombia
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
