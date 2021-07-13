@@ -19,9 +19,7 @@ El código en lenguaje de Interlis, con el que se modelan los datos, se puede es
 
 <a class="" data-lightbox="Modelo en lenguaje Interlis" href="./_static/04_modelo_en_interlis.png" title="Modelo en lenguaje Interlis" data-title="Modelo en lenguaje Interlis"><img src="./_static/04_modelo_en_interlis.png" class="align-center" alt="./_static/04_modelo_en_interlis.png"/></a>
 
-------
-
-[^enlace_ili2c]: https://www.interlis.ch/en/downloads/ili2c
+[^enlace_ili2c]: [Sitio de descarga de ili2c](https://www.interlis.ch/en/downloads/ili2c)
 
 Otra estrategia que se puede utilizar es generar el código de Interlis a partir de un Diagrama de clases de UML usando la herramienta llamada UML/Interlis Editor. Esta herramienta e ili2c son explicadas más adelante en este mismo documento.
 
