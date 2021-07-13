@@ -28,6 +28,7 @@ author = 'SwissTierras Colombia'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxcontrib.images',
     'myst_parser'
 ]
 

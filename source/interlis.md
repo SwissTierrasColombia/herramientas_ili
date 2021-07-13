@@ -8,7 +8,7 @@ Dos organizaciones del sector de la salud, la organización A y la organización
 
 En el *modelo de datos* de la organización A, los pacientes se almacenan con el nombre **Persona**, mientras que en la organización B son almacenados con el nombre de **Cliente**. Además de esto, los nombres de los pacientes se almacenan con una estructura ligeramente diferente (ver la imagen).
 
-![Modelo organizaciones](./_static/organizaciones.png)
+<a class="" data-lightbox="Modelo organizaciones" href="./_static/organizaciones.png" title="Modelo organizaciones" data-title="Modelo organizaciones"><img src="./_static/organizaciones.png" class="align-center" alt="./_static/organizaciones.png"/></a>
 
 A pesar de ser el mismo concepto, estas pequeñas diferencias en los nombres, en las estructuras y posiblemente en los tipos de datos, dificulta el objetivo de intercambiar la información. Para lograr dicho objetivo, las organizaciones deben de definir una **semántica común** y un formato con el que se va a transferir la información. Por lo cuál se plantean los siguientes interrogantes: ¿Cómo definir una semántica común? ¿Qué formato de transferencia elegir?
 
