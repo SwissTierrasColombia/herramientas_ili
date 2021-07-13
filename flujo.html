@@ -26,6 +26,9 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/translations.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,6 +38,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Herramientas Interlis" href="herramientas.html" />
@@ -170,12 +174,12 @@
 <li><p>Importar Datos</p></li>
 <li><p>Validar Datos (Paso transversal al flujo)</p></li>
 </ol>
-<p><img alt="flujo de implementación interlis" src="_images/03_flujo_implementacion_interlis.png" /></p>
+<p><a class="" data-lightbox="Flujo de implementación Interlis" href="./_static/03_flujo_implementacion_interlis.png" title="Flujo de implementación Interlis" data-title="Flujo de implementación Interlis"><img src="./_static/03_flujo_implementacion_interlis.png" class="align-center" width="800px" alt="./_static/03_flujo_implementacion_interlis.png"/></a></p>
 <div class="section" id="modelado-de-datos">
 <h2>Modelado de Datos<a class="headerlink" href="#modelado-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El primer paso al usar Interlis es el <strong>Modelado de Datos</strong> con el lenguaje de Interlis. Este paso es el más importante, debido a que el modelado de datos con Interlis no solo nos permite describir los modelos que abstraen la realidad que se requiere representar, sino que define una semántica común entre los sistemas de información que van a cooperar y además especifica implícitamente la estructura del formato de transferencia de Interlis.</p>
 <p>El código en lenguaje de Interlis, con el que se modelan los datos, se puede escribir en cualquier editor de texto. Lo importante es que cumpla con la sintaxis de Interlis y esto se logra examinando el archivo fuente con un compilador de Interlis como <strong>ili2c</strong><a class="footnote-reference brackets" href="#enlace-ili2c" id="id1">1</a>. Como ejemplo, en la siguiente imagen se observa el código de un modelo denominado <em>Land_Admin_Model</em> en el lenguaje de Interlis.</p>
-<p><img alt="modelo en lenguaje interlis" src="_images/04_modelo_en_interlis.png" /></p>
+<p><a class="" data-lightbox="Modelo en lenguaje Interlis" href="./_static/04_modelo_en_interlis.png" title="Modelo en lenguaje Interlis" data-title="Modelo en lenguaje Interlis"><img src="./_static/04_modelo_en_interlis.png" class="align-center" alt="./_static/04_modelo_en_interlis.png"/></a></p>
 <hr class="docutils" />
 <p>Otra estrategia que se puede utilizar es generar el código de Interlis a partir de un Diagrama de clases de UML usando la herramienta llamada UML/Interlis Editor. Esta herramienta e ili2c son explicadas más adelante en este mismo documento.</p>
 </div>
@@ -183,8 +187,8 @@
 <h2>Generar un modelo físico<a class="headerlink" href="#generar-un-modelo-fisico" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Interlis tiene como uno de sus enfoques ser independiente al software sobre el que se implementa el modelo, esto bajo el principio de neutralidad tecnológica. Pero en la práctica, los datos de los sistemas de información se guardan en bases de datos de un motor específico, y por lo tanto, es necesario que los modelos de Interlis sean transformados a algún Sistema gestor de Bases de datos en particular. La virtud de Interlis en este sentido, es que cuenta con una serie de herramientas que permite pasar del modelo descriptivo a diferentes motores de bases de datos. En el presente enfoque se <strong>Genera un modelo físico</strong> (esquema de base de datos) en el motor de base de datos que requiere el sistema y que es compatible 100% con Interlis.</p>
 <p>Interlis es independiente de plataformas. Sin embargo, existen herramientas de software como ili2db que permiten transformar un modelo descrito en Intelis a esquemas de base de datos compatibles. Estas herramientas traducen las clases, relaciones y tipos de datos a sus equivalentes en el motor de base de datos de destino. En las siguientes imágenes se presentan las bases de datos generadas en Postgres y MsSQL Server respectivamente, para el modelo <em>Land_Admin_Model</em> presentado anteriormente.</p>
-<p><img alt="modelo intelis generado en postgres" src="_images/05_modelo_en_postgres.png" />
-<img alt="modelo interlis generado en MsSql" src="_images/modelo_en_mssql.png" /></p>
+<p><a class="" data-lightbox="Modelo Interlis generado en Postgres" href="./_static/05_modelo_en_postgres.png" title="Modelo Interlis generado en Postgres" data-title="Modelo Interlis generado en Postgres"><img src="./_static/05_modelo_en_postgres.png" class="align-center"  alt="./_static/05_modelo_en_postgres.png"/></a>
+<a class="" data-lightbox="Modelo Interlis generado en MsSql" href="./_static/modelo_en_mssql.png" title="Modelo Interlis generado en MsSql" data-title="Modelo Interlis generado en MsSql"><img src="./_static/modelo_en_mssql.png" class="align-center" alt="./_static/modelo_en_mssql.png"/></a></p>
 </div>
 <div class="section" id="generar-y-editar-datos">
 <h2>Generar y Editar Datos<a class="headerlink" href="#generar-y-editar-datos" title="Enlazar permanentemente con este título">¶</a></h2>

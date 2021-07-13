@@ -26,6 +26,9 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/translations.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,6 +38,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Flujo de implementación con Interlis" href="flujo.html" />
@@ -162,7 +166,7 @@
 <p><strong>Escenario:</strong></p>
 <p>Dos organizaciones del sector de la salud, la organización A y la organización B, requieren intercambiar información para usar en sus procesos (<strong>interoperabilidad</strong>). Entre toda la información que van a intercambiar, están los datos de sus <em>pacientes</em>.</p>
 <p>En el <em>modelo de datos</em> de la organización A, los pacientes se almacenan con el nombre <strong>Persona</strong>, mientras que en la organización B son almacenados con el nombre de <strong>Cliente</strong>. Además de esto, los nombres de los pacientes se almacenan con una estructura ligeramente diferente (ver la imagen).</p>
-<p><img alt="Modelo organizaciones" src="_images/organizaciones.png" /></p>
+<p><a class="" data-lightbox="Modelo organizaciones" href="./_static/organizaciones.png" title="Modelo organizaciones" data-title="Modelo organizaciones"><img src="./_static/organizaciones.png" class="align-center" alt="./_static/organizaciones.png"/></a></p>
 <p>A pesar de ser el mismo concepto, estas pequeñas diferencias en los nombres, en las estructuras y posiblemente en los tipos de datos, dificulta el objetivo de intercambiar la información. Para lograr dicho objetivo, las organizaciones deben de definir una <strong>semántica común</strong> y un formato con el que se va a transferir la información. Por lo cuál se plantean los siguientes interrogantes: ¿Cómo definir una semántica común? ¿Qué formato de transferencia elegir?</p>
 <div class="section" id="que-es-interlis">
 <h2>¿Qué es Interlis?<a class="headerlink" href="#que-es-interlis" title="Enlazar permanentemente con este título">¶</a></h2>

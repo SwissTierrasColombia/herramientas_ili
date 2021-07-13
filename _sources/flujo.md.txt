@@ -9,7 +9,7 @@ El siguiente es el enfoque para la implementación de Interlis (ver imagen) prop
 5. Importar Datos
 6. Validar Datos (Paso transversal al flujo)
 
-![flujo de implementación interlis](./_static/03_flujo_implementacion_interlis.png)
+<a class="" data-lightbox="Flujo de implementación Interlis" href="./_static/03_flujo_implementacion_interlis.png" title="Flujo de implementación Interlis" data-title="Flujo de implementación Interlis"><img src="./_static/03_flujo_implementacion_interlis.png" class="align-center" width="800px" alt="./_static/03_flujo_implementacion_interlis.png"/></a>
 
 ## Modelado de Datos
 
@@ -17,7 +17,7 @@ El primer paso al usar Interlis es el **Modelado de Datos** con el lenguaje de I
 
 El código en lenguaje de Interlis, con el que se modelan los datos, se puede escribir en cualquier editor de texto. Lo importante es que cumpla con la sintaxis de Interlis y esto se logra examinando el archivo fuente con un compilador de Interlis como **ili2c**[^enlace_ili2c]. Como ejemplo, en la siguiente imagen se observa el código de un modelo denominado *Land_Admin_Model* en el lenguaje de Interlis.
 
-![modelo en lenguaje interlis](./_static/04_modelo_en_interlis.png)
+<a class="" data-lightbox="Modelo en lenguaje Interlis" href="./_static/04_modelo_en_interlis.png" title="Modelo en lenguaje Interlis" data-title="Modelo en lenguaje Interlis"><img src="./_static/04_modelo_en_interlis.png" class="align-center" alt="./_static/04_modelo_en_interlis.png"/></a>
 
 ------
 
@@ -31,8 +31,8 @@ Interlis tiene como uno de sus enfoques ser independiente al software sobre el q
 
 Interlis es independiente de plataformas. Sin embargo, existen herramientas de software como ili2db que permiten transformar un modelo descrito en Intelis a esquemas de base de datos compatibles. Estas herramientas traducen las clases, relaciones y tipos de datos a sus equivalentes en el motor de base de datos de destino. En las siguientes imágenes se presentan las bases de datos generadas en Postgres y MsSQL Server respectivamente, para el modelo *Land_Admin_Model* presentado anteriormente.
 
-![modelo intelis generado en postgres](./_static/05_modelo_en_postgres.png)
-![modelo interlis generado en MsSql](./_static/modelo_en_mssql.png)
+<a class="" data-lightbox="Modelo Interlis generado en Postgres" href="./_static/05_modelo_en_postgres.png" title="Modelo Interlis generado en Postgres" data-title="Modelo Interlis generado en Postgres"><img src="./_static/05_modelo_en_postgres.png" class="align-center"  alt="./_static/05_modelo_en_postgres.png"/></a>
+<a class="" data-lightbox="Modelo Interlis generado en MsSql" href="./_static/modelo_en_mssql.png" title="Modelo Interlis generado en MsSql" data-title="Modelo Interlis generado en MsSql"><img src="./_static/modelo_en_mssql.png" class="align-center" alt="./_static/modelo_en_mssql.png"/></a>
 
 ## Generar y Editar Datos
 
