@@ -65,17 +65,17 @@ Es un conjunto de herramientas de consola para trabajar con Interlis. Cada una d
 
 <a class="" data-lightbox="Diagrama de funcionalidades de ili2db" href="./_static/ili2db02.png" title="Diagrama de funcionalidades de ili2db" data-title="Diagrama de funcionalidades de ili2db"><img src="./_static/ili2db02.png" class="align-center" alt="./_static/ili2db02.png"/></a>
 
-1. **Crear un esquema de base de datos** a partir de uno o varios modelos descritos en el lenguaje de modelado de Interlis (archivos ili).
-2. **Exportar datos** desde una base de datos a un archivo de transferencia de Interlis (xtf).
-3. **Importar datos** desde un archivo de transferencia de Interlis (xtf) a una base de datos.
+1. **<span style="color: #66cc00">Crear un esquema de base de datos</span>** a partir de uno o varios modelos descritos en el lenguaje de modelado de Interlis (archivos ili).
+2. **<span style="color: #3333ff">Exportar datos</span>** desde una base de datos a un archivo de transferencia de Interlis (xtf).
+3. **<span style="color: #696900">Importar datos</span>** desde un archivo de transferencia de Interlis (xtf) a una base de datos.
 
-El nombre de cada aplicación sigue la convención **ili** **2** **[Sigla de un motor de base de datos]** que significa **Interlis** **To** **DB de destino**. Por ejemplo, si se requiere trabajar con el motor **Postgres**, la aplicación que debemos utilizar es **ili2pg** como se especifica en la siguiente tabla.
+El nombre de cada aplicación sigue la convención **<span style="color: red">ili</span> <span style="color: #9400d3">2</span> <span style="color: #daa520">[Sigla de un motor de base de datos]</span>** que significa **<span style="color: red">Interlis</span> <span style="color: #9400d3">To</span> <span style="color: #daa520">DB de destino</span>**. Por ejemplo, si se requiere trabajar con el motor **Postgres**, la aplicación que debemos utilizar es **ili2pg** como se especifica en la siguiente tabla.
 
-| **Interlis** **To** **DB de destino** | **Descripción**                            |
-| ------------------------------------- | ------------------------------------------ |
-| **ili**2**pg**                        | **Interlis** **a** **Postgres**            |
-| **ili**2**ora**                       | **Interlis** **a** **Oracle**              |
-| **ili**2**mssql**                     | **Interlis** **a** **Microsoft SQLServer** |
+| Herramienta                                                  | Descripción                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <span style="color: red">ili</span><span style="color: #9400d3">2</span><span style="color: #daa520">pg</span> | <span style="color: red">Interlis</span> <span style="color: #9400d3">a</span> <span style="color: #daa520">Postgres</span> |
+| <span style="color: red">ili</span><span style="color: #9400d3">2</span><span style="color: #daa520">ora</span> | <span style="color: red">Interlis</span> <span style="color: #9400d3">a</span> <span style="color: #daa520">Oracle</span> |
+| <span style="color: red">ili</span><span style="color: #9400d3">2</span><span style="color: #daa520">mssql</span> | <span style="color: red">Interlis</span> <span style="color: #9400d3">a</span> <span style="color: #daa520">Microsoft SQLServer</span> |
 
 En la Tabla siguiente se listan las aplicaciones que existen actualmente con las correspondientes bases de datos que gestionan y el nivel de participación de SwissTierras Colombia en el desarrollo de éstas.
 
@@ -87,7 +87,6 @@ En la Tabla siguiente se listan las aplicaciones que existen actualmente con las
 | ili2mssql       | Ms SQL Server 2012 o superior  | Creación de la herramienta y corrección de errores    |
 | ili2ora         | Oracle 11 o superior           | Actualizado a Oracle Spatial y corrección de  errores |
 | ili2fgdb        | File Geodatabase               | No participa.                                         |
-| ili2gdb         | GeoDb                          | No participa.                                         |
 | ili2mdb         | Microsoft Access Database      | No participa.                                         |
 | ili2mysql       | My SQL                         | No participa.                                         |
 
