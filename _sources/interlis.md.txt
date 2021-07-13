@@ -1,6 +1,6 @@
 # Interlis
 
-Antes de entrar en detalles sobre Interlis[^def_nombre], es preciso plantear el siguiente escenario:
+Antes de entrar en detalles sobre Interlis, es preciso plantear el siguiente escenario:
 
 **Escenario:**
 
@@ -16,8 +16,8 @@ A pesar de ser el mismo concepto, estas pequeñas diferencias en los nombres, en
 
 Interlis es un estándar (SN612031) cuyo objetivo es resolver los interrogantes que plantea el escenario descrito anteriormente, dado que fue pensado para buscar la **interoperabilidad** entre Sistemas de Información independientemente de la plataforma que estos utilizan. Concretamente, Interlis es la combinación de dos elementos:
 
-1. **Un lenguaje** para la descripción de modelos con el que se busca definir una semántica común
-2. **Un formato de transferencia** unificado que se deriva de los modelos descritos con el lenguaje de Interlis
+1. **Un lenguaje**[^def_lenguaje] para la descripción de modelos con el que se busca definir una semántica común
+2. **Un formato de transferencia**[^def_xtf] unificado que se deriva de los modelos descritos con el lenguaje de Interlis
 
 **¿Qué quiere decir esto?**
 
@@ -48,7 +48,7 @@ Con este modelo las organizaciones A y B no solo llegan a un acuerdo con respect
 
 **¿Cómo la descripción del modelo también especifica el formato de transferencia?** 
 
-El formato de transferencia de Interlis[^def_xtf] esta escrito en lenguaje XML. La estructura de este, a su vez, es formada por las estructuras y relaciones entre clases que contiene el modelo. De esta forma, un registro que pertenece a cierta clase es envuelto en una etiqueta XML con el nombre de la clase a la que pertenece, y los valores de cada atributo son envueltos en etiquetas con el nombre del atributo al que pertenecen.
+El formato de transferencia de Interlis esta escrito en lenguaje XML. La estructura de este, a su vez, es formada por las estructuras y relaciones entre clases que contiene el modelo. De esta forma, un registro que pertenece a cierta clase es envuelto en una etiqueta XML con el nombre de la clase a la que pertenece, y los valores de cada atributo son envueltos en etiquetas con el nombre del atributo al que pertenecen.
 
 Para el ejemplo, se puede apreciar que el registro de la paciente *Martina González* se encuentra entre la etiqueta XML *«Modelo_pacientes_ejemplo.Salud.Paciente»* con sus atributos también dentro de etiquetas con los nombres especificados en el modelo de Interlis:
 
@@ -96,7 +96,5 @@ El formato de transferencia de Interlis está escrito en lenguaje XML y su estru
 
 Como los archivos generados deben ser conformes al modelo descrito en Interlis, es posible verificar que estos tengan la estructura de los datos, las relaciones y su cardinalidad y demás reglas consignadas en los modelos de forma automática. Esta es una **validación de datos** mucho más potente que la que se podría hacer con el XSD asociado.
 
-
-[^def_nombre]: [Manual de Interlis](https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf) capítulos 1 y 2
+[^def_lenguaje]: [Manual de Interlis](https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf) capítulo 2
 [^def_xtf]: [Manual de Interlis](https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf) capítulo 3
-

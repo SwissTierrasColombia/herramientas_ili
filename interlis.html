@@ -162,7 +162,7 @@
             
   <div class="tex2jax_ignore mathjax_ignore section" id="interlis">
 <h1>Interlis<a class="headerlink" href="#interlis" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Antes de entrar en detalles sobre Interlis<a class="footnote-reference brackets" href="#def-nombre" id="id1">1</a>, es preciso plantear el siguiente escenario:</p>
+<p>Antes de entrar en detalles sobre Interlis, es preciso plantear el siguiente escenario:</p>
 <p><strong>Escenario:</strong></p>
 <p>Dos organizaciones del sector de la salud, la organización A y la organización B, requieren intercambiar información para usar en sus procesos (<strong>interoperabilidad</strong>). Entre toda la información que van a intercambiar, están los datos de sus <em>pacientes</em>.</p>
 <p>En el <em>modelo de datos</em> de la organización A, los pacientes se almacenan con el nombre <strong>Persona</strong>, mientras que en la organización B son almacenados con el nombre de <strong>Cliente</strong>. Además de esto, los nombres de los pacientes se almacenan con una estructura ligeramente diferente (ver la imagen).</p>
@@ -172,8 +172,8 @@
 <h2>¿Qué es Interlis?<a class="headerlink" href="#que-es-interlis" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Interlis es un estándar (SN612031) cuyo objetivo es resolver los interrogantes que plantea el escenario descrito anteriormente, dado que fue pensado para buscar la <strong>interoperabilidad</strong> entre Sistemas de Información independientemente de la plataforma que estos utilizan. Concretamente, Interlis es la combinación de dos elementos:</p>
 <ol class="simple">
-<li><p><strong>Un lenguaje</strong> para la descripción de modelos con el que se busca definir una semántica común</p></li>
-<li><p><strong>Un formato de transferencia</strong> unificado que se deriva de los modelos descritos con el lenguaje de Interlis</p></li>
+<li><p><strong>Un lenguaje</strong><a class="footnote-reference brackets" href="#def-lenguaje" id="id1">1</a> para la descripción de modelos con el que se busca definir una semántica común</p></li>
+<li><p><strong>Un formato de transferencia</strong><a class="footnote-reference brackets" href="#def-xtf" id="id2">2</a> unificado que se deriva de los modelos descritos con el lenguaje de Interlis</p></li>
 </ol>
 <p><strong>¿Qué quiere decir esto?</strong></p>
 <p>En el escenario planteado inicialmente, si las organizaciones utilizan Interlis, pueden definir una semántica común a través de un modelo descrito en el <strong>lenguaje de Interlis</strong>, como por ejemplo el modelo a continuación:</p>
@@ -199,7 +199,7 @@ END Modelo_pacientes_ejemplo.
 </div>
 <p>Con este modelo las organizaciones A y B no solo llegan a un acuerdo con respecto a la información que van a compartir (los nombres, tipos de datos, campos obligatorios, entre otras cosas), sino que también define el formato con el que se transfiere la información.</p>
 <p><strong>¿Cómo la descripción del modelo también especifica el formato de transferencia?</strong></p>
-<p>El formato de transferencia de Interlis<a class="footnote-reference brackets" href="#def-xtf" id="id2">2</a> esta escrito en lenguaje XML. La estructura de este, a su vez, es formada por las estructuras y relaciones entre clases que contiene el modelo. De esta forma, un registro que pertenece a cierta clase es envuelto en una etiqueta XML con el nombre de la clase a la que pertenece, y los valores de cada atributo son envueltos en etiquetas con el nombre del atributo al que pertenecen.</p>
+<p>El formato de transferencia de Interlis esta escrito en lenguaje XML. La estructura de este, a su vez, es formada por las estructuras y relaciones entre clases que contiene el modelo. De esta forma, un registro que pertenece a cierta clase es envuelto en una etiqueta XML con el nombre de la clase a la que pertenece, y los valores de cada atributo son envueltos en etiquetas con el nombre del atributo al que pertenecen.</p>
 <p>Para el ejemplo, se puede apreciar que el registro de la paciente <em>Martina González</em> se encuentra entre la etiqueta XML <em>«Modelo_pacientes_ejemplo.Salud.Paciente»</em> con sus atributos también dentro de etiquetas con los nombres especificados en el modelo de Interlis:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;TRANSFER</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.interlis.ch/INTERLIS2.3&quot;</span><span class="nt">&gt;</span>
@@ -243,8 +243,8 @@ END Modelo_pacientes_ejemplo.
 <p>Como los archivos generados deben ser conformes al modelo descrito en Interlis, es posible verificar que estos tengan la estructura de los datos, las relaciones y su cardinalidad y demás reglas consignadas en los modelos de forma automática. Esta es una <strong>validación de datos</strong> mucho más potente que la que se podría hacer con el XSD asociado.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="def-nombre"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><a class="reference external" href="https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf">Manual de Interlis</a> capítulos 1 y 2</p>
+<dt class="label" id="def-lenguaje"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf">Manual de Interlis</a> capítulo 2</p>
 </dd>
 <dt class="label" id="def-xtf"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p><a class="reference external" href="https://www.interlis.ch/download/interlis2/ili2-refman_2006-04-13_e.pdf">Manual de Interlis</a> capítulo 3</p>
